@@ -141,11 +141,10 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) and (max-width: 980px) {
+@media all and (min-width: 480px) {
 
-  form input, form select {
-    width: 80%;
   }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -290,9 +289,16 @@ header nav ul {
   }
 }
 
-  @media all and (min-width: 600px){
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+@media all and (min-width: 480px) and (max-width: 980px) {
+  form input, form select {
+   width: 80%;
   }
+}
+
+
+@media all and (min-width: 600px){
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
