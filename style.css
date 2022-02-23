@@ -1,3 +1,5 @@
+/* -------  General Styles ------- */
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -53,6 +55,8 @@ img {
 /* -------  Navigation ------- */
 
 header {
+  display: flex;
+  flex-direction: column;
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -142,20 +146,23 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
-
-
-
+  form input,
+  form select {
+    min-width: 0;
+  }
   header {
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
   }
-header nav ul {
+
+  header nav ul {
     display: flex;
     padding-left: 0;
     list-style: none;
-    justify-content: space-between;
   }
+
+  /* Changed the font size of the logo so it would not get cut*/
 
   .logo {
     font-family: "Pangolin", cursive;
@@ -180,12 +187,6 @@ header nav ul {
     text-decoration: none;
   }
 
-  p {
-    line-height: 1.5em;
-    margin: 0;
-  }
-
-
   form {
     border: 2px solid #ff385c;
     padding: 10px;
@@ -194,6 +195,7 @@ header nav ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 12px;
   }
 
   form label {
@@ -201,19 +203,40 @@ header nav ul {
     font-size: 17px;
   }
 
-  form select,
-  form input {
-    margin-bottom: 20px;
-    width: 180px;
-  }
-
   form button {
     background-color: #ff385c;
     border: none;
     color: #fff;
-    font-size: 24px;
-    padding: 20px;
-    width: 18%;
+    width: 160px;
+    flex: 1;
+  }
+
+  .travel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+  }
+
+  .end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+  }
+
+  .type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   #about .info {
@@ -222,10 +245,22 @@ header nav ul {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    width: 100%;
   }
 
   #about img {
-    max-width: 23%;
+    max-width: 45%;
+    margin: 0;
+  }
+
+  .infoimages {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .info p {
+    width: 100%;
   }
 
   #ideas {
@@ -245,7 +280,7 @@ header nav ul {
     margin: 12px;
     text-align: left;
   }
- 
+
   #host {
     margin-top: 12px;
     padding-top: 20px;
@@ -267,44 +302,20 @@ header nav ul {
   #text1 {
     padding: 0 25px;
   }
-
-  .travel {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .start {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .end {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .type {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  }
-
-
-@media all and (min-width: 480px) and (max-width: 980px) {
-  form input, form select {
-  width: 80%;
-  }
 }
+/* media query for medium size header */
 
-
-@media all and (min-width: 600px){
+@media all and (min-width: 600px) {
   header {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 980px) {
+  form input,
+  form select {
+    width: 80%;
+    min-width: 0;
   }
 }
